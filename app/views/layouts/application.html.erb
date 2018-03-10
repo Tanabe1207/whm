@@ -52,6 +52,22 @@
         </div>
       </nav>
 
+      <% if flash[:notice] %>
+        <div class="alert alert-success">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <% if flash[:alert] %>
+        <div class="alert alert-danger">
+          <%= flash[:alert] %>
+        </div>
+<!-- flashは
+flash: {
+  alert: "登録に失敗しました"
+}
+ように、hashという形式で定義されており<%= flash[:alert] %>のようにすることで、それぞれにアクセスすることができます。 -->
+      <% end %>
+
     <%= yield %>
   </body>
 </html>

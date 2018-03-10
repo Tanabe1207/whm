@@ -16,8 +16,8 @@ class UsersController < ApplicationController
 
     private
     def user_params
-      params.require(:user).permit(:nickname,:mail,:password,:password_conformation)
-      #他の要素もストロングパラメータに入れる？
+      params.require(:user).permit(:nickname,:mail,:password,:password_conformation,:my_image,:gender,:age,:nationality,:hobby,:introduce)
+
     end
     has_secure_password
 end

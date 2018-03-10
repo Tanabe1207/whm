@@ -8,13 +8,13 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :gender
       t.string :age
       t.string :nationality
+      t.string :languages
+      t.string :offers
+      t.string :favorites
       t.string :hobby #趣味でおすすめを表示させたいが
       # t.string :job
       t.string :introduce
 
-      has_many :languages
-      has_many :offers
-      has_many :favorites
 
       t.timestamps
     end
