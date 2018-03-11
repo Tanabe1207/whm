@@ -4,23 +4,3 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "custom";
-
-.navber-transparent{
-  margin-bottom: 0px;
-  background-color: #FDF5E6;
-// 参考：下記のコードの"a"はアンカー。アンカーはリンクが張られてる文字のこと。
-// アンカーはデフォルトで青字になるが、!importantは何よりもこれを優先しろの意。
-// つまりアンカーを白#fffにしろという命令だが、.navber-transparentクラス内の要素は
-// 画像なので、変化はない。なので入れない。
-  // a {
-  // color: #fff !important;
-  // }
-  .navber-brand{
-    padding: 0px;
-    margin-top: 10px;
-  }
-
-   img{
-     height: 20px;
-   }
-}

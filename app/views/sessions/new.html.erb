@@ -4,7 +4,8 @@
       <div class="col-md-offset-4 col-md-2 users-new-container">
         <h1 class="text-center text-white">Log in</h1>
         <%= form_for :session, url: login_path do |f| %>
-        <!-- これどこに行ってる？ -->
+        <!-- form_forはデフォルトでHTTPメソッドのPOSTに飛ぶ。
+      login_pathはrouterの'/login'を探せと指定してる -->
          <div class="form-group">
            <%= f.label :mail, class: 'text-white' %>
            <%= f.text_field :mail, class: 'form-control' %>

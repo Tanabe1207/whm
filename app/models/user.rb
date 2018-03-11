@@ -1,9 +1,9 @@
 class User < ApplicationRecord
-  validates :nickname, presence: true
-  validates :mail, presence: true
-  validates :gender
-  numericality :age
-  validates :nationality
+  validates :nickname, uniqueness: true
+  validates :mail, uniqueness: true
+  validates :gender, acceptance: true
+  validates :age, numericality: true
+  validates :nationality, presence: true
 
   has_many :languages
   has_many :user_languages, through: :user_id, source: 'language'
