@@ -49,10 +49,10 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 
-  # gem 'pry-rails'
-  # gem 'pry-doc'
-  # gem 'pry-byebug'
-  # gem 'pry-stack_explorer'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
 
   gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 
