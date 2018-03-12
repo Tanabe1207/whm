@@ -10,6 +10,7 @@
           </div>
           <div class="form-group">
             <%= f.label :mail, class: 'text-white' %>
+            <!-- <label class="text-white" for="mail">メールアドレス</label> -->
             <%= f.text_field :mail, class: 'form-control' %>
           </div>
           <div class="form-group">
@@ -45,7 +46,9 @@
             <%= f.text_field :age, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.select :nationality,
+             <%= f.select :nationality,
+             { nationality: "Japan","Korea","China"},{ class: 'text-white'} %>
+            <%#= f.select :nationality,
             [["Japan"]["Korea"]["China"]["Chinese Taipei"]["Hong Kong"]["Australia"]["Canada"]["New Zealand"]["Ireland"]["German"]["UK"]["France"]]
              class: 'form-control' %>
           </div>
@@ -63,17 +66,11 @@
             <%= f.label :introduce, class: 'text-white' %>
             <%= f.text_field :introduce, class: 'form-control' %>
           </div>
-          <div class="form-group">
-            <%= f.label :, class: 'text-white' %>
-            <%= f.text_field :, class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <%= f.label :, class: 'text-white' %>
-            <%= f.text_field :, class: 'form-control' %>
-          </div>
 
           <%= f.submit "登録", class: 'btn-block btn-white' %>
         <% end %>
+
+
 
       </div>
     </div>

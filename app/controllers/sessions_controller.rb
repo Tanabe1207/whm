@@ -14,10 +14,29 @@ class SessionsController < ApplicationController
       # 右辺は、user（行）に.authenticateメソッドで、viewで指定した変数sessionの中身のpasswordとデータベースの暗号化されたpasswordが一致しているか確かめている。
       #一致していればtrue。左辺と右辺両方がtrueならtrueを返す。
       log_in user
+      #()を省略してる
+      debugger
       redirect_to root_path, alert:'ログインに成功しました'
     else
       flash[:denger] = 'ログインに失敗しました'
       render 'new'
     end
-  end  
+   end
+
+    def destroy
+     log_out
+     redirect_to root_url
+    end
+
+   private
+    def log_in(user)
+      session[:user_id] = user.id
+      #sessionの中のuser_idカラムに、ログインしたuserのidを入れる。
+    end
+
+    def log_out
+      session.delete(:user_id)
+      @current_user = nil
+    end
+
 end
