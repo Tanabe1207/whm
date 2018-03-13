@@ -10,11 +10,12 @@
 
   <body>
     <nav class="navber navber-default navber-fixed-top navber-transparent">
+
       <div class="ber_container">
             <% link_to root_path do %>
               <span><%= image_tag 'icons/logo.png', class:'navber-brand' %></span>
             <% end %>
-            <ul class="nav navber-nav navber right">
+            <ul class="nav navber-nav navber-right">
               <% if logged_in? %><!-- "?"は真偽値を返す-->
                   <li>
                     <%= link_to '#' do %>

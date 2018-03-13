@@ -17,12 +17,25 @@
   // a {
   // color: #fff !important;
   // }
-  .navber-brand{
-    padding: 10px;
-    margin-top: 10px;
-  }
+  .ber_container:after{
+      clear: both;
+      display: block;
+      content: " ";
 
-   img{
-     height: 20px;
+      .navber-brand{
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+    .navber-right li {
+      float: right;
+      padding: 0 30px;
+      text-align: center;
+      list-style-type: none;
+    }
+
+       img{
+         height: 20px;
+       }
    }
 }
