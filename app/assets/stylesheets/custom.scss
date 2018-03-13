@@ -17,25 +17,18 @@
   // a {
   // color: #fff !important;
   // }
-  .ber_container:after{
-      clear: both;
-      display: block;
-      content: " ";
+  .navber-brand{
+    padding: 0px;
+    margin: 10px
+  }
+  .navber-right{
+    float:right
+  }
+  .navber-right li{
+    float:right
+  }
 
-      .navber-brand{
-        padding: 10px;
-        margin-top: 10px;
-      }
-
-    .navber-right li {
-      float: right;
-      padding: 0 30px;
-      text-align: center;
-      list-style-type: none;
-    }
-
-       img{
-         height: 20px;
-       }
+   img{
+     height: 40px;
    }
 }
